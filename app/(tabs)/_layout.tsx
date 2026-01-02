@@ -27,7 +27,7 @@ export default function TabsLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: "Black",
+        tabBarActiveTintColor: "#3c6e71",
         tabBarInactiveTintColor: "#777",
         tabBarStyle: {
           backgroundColor: "#fff",
@@ -38,7 +38,7 @@ export default function TabsLayout() {
           elevation: 5,
         },
         tabBarLabelStyle: {
-          fontSize: 12,
+          fontSize: 10,
           fontWeight: "600",
         },
         headerStyle: {
@@ -51,6 +51,7 @@ export default function TabsLayout() {
           color: "Black",
         },
         headerTitleAlign: "center",
+    
       }}
     >
       <Tabs.Screen
@@ -58,7 +59,7 @@ export default function TabsLayout() {
         options={{
           title: "Home",
           tabBarIcon: ({ color, size }) => (
-            <FontAwesome5 name="home" color={color} size={size || 22} />
+            <FontAwesome5 name="home" color={color} size={size || 10} />
           ),
         }}
       />
@@ -67,7 +68,7 @@ export default function TabsLayout() {
         options={{
           title: "Doctors",
           tabBarIcon: ({ color, size }) => (
-            <MaterialIcons name="local-hospital" color={color} size={size || 24} />
+            <MaterialIcons name="local-hospital" color={color} size={size || 10} />
           ),
         }}
       />
@@ -76,7 +77,16 @@ export default function TabsLayout() {
         options={{
           title: "Appointments",
           tabBarIcon: ({ color, size }) => (
-            <FontAwesome5 name="calendar-check" color={color} size={size || 22} />
+            <FontAwesome5 name="calendar-check" color={color} size={size || 10} />
+          ),
+        }}
+      />
+       <Tabs.Screen
+        name="clinics"
+        options={{
+          title: "Clinics",
+          tabBarIcon: ({ color, size }) => (
+            <FontAwesome5 name="clinic-medical" color={color} size={size || 10} />
           ),
         }}
       />
@@ -85,7 +95,7 @@ export default function TabsLayout() {
         options={{
           title: "Profile",
           tabBarIcon: ({ color, size }) => (
-            <FontAwesome5 name="user-circle" color={color} size={size || 24} />
+            <FontAwesome5 name="user-circle" color={color} size={size || 10} />
           ),
         }}
       />

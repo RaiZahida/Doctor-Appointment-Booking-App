@@ -1,10 +1,10 @@
-{
+ {
   "expo": {
     "name": "sda",
     "slug": "sda",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/splash-icon.png",
     "scheme": "sda",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,

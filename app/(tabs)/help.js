@@ -1,10 +1,22 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Linking, Alert } from "react-native";
 import { Button } from "react-native-paper";
-import { useRouter } from "expo-router";
 
 export default function Help() {
-  const router = useRouter();
+  const doctorNumber = "+923001234567"; // Replace with actual doctor number
+
+  const handleCall = () => {
+    // Check if device can open the dialer
+    Linking.canOpenURL(`tel:${doctorNumber}`)
+      .then((supported) => {
+        if (!supported) {
+          Alert.alert("Error", "Calling is not supported on this device");
+        } else {
+          return Linking.openURL(`tel:${doctorNumber}`);
+        }
+      })
+      .catch((err) => console.error(err));
+  };
 
   return (
     <View style={styles.container}>
@@ -12,7 +24,7 @@ export default function Help() {
 
       <Button
         mode="contained"
-        onPress={() => router.push("/call")} // we’ll make this screen next
+        onPress={handleCall}
         style={styles.button}
       >
         Start Voice Call

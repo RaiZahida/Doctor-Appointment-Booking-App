@@ -51,6 +51,13 @@ export default function Home() {
         >
         Edit  Doctors
         </Button>
+        <Button
+          mode="contained"
+          style={{ marginVertical: 10 }}
+          onPress={() => router.push("/addclinic")}
+        >
+          Add Clinic
+        </Button>
         {/* You can add more admin actions here */}
       </View>
     );
@@ -61,7 +68,8 @@ export default function Home() {
     <View style={styles.container}>
       {/* Greeting */}
       <Text style={{ ...styles.heading, color: theme.colors.primary }}>
-        Hi {user?.name || "User"}
+    Salam,   
+            {user?.name || "User"}
       </Text>
       <Text style={styles.sub}>Book your next appointment easily</Text>
 
@@ -83,9 +91,10 @@ export default function Home() {
               <FontAwesome5
                 name={spec.icon}
                 size={28}
-                color={theme.colors.primary}
+                color={"#ffffff"}
               />
-              <Title style={styles.specText}>{spec.name}</Title>
+              <Title style={styles.specText}
+               >{spec.name}</Title>
             </Card.Content>
           </Card>
         ))}
@@ -135,19 +144,23 @@ const styles = StyleSheet.create({
   },
   sub: {
     fontSize: 16,
-    color: "#555",
+    // color: "#ffffff",
     marginBottom: 25,
   },
   specialScroll: {
     marginBottom: 30,
   },
   specCard: {
-    width: 140,
+    width: 200,
     marginRight: 15,
     borderRadius: 15,
+    borderColor: '#ffffff',
+    backgroundColor: "#3c6e71",
+    borderWidth: 2,
     elevation: 3,
     justifyContent: "center",
     alignItems: "center",
+    
   },
   cardContent: {
     alignItems: "center",
@@ -157,6 +170,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     fontSize: 16,
     textAlign: "center",
+  color: "#ffffff",
   },
   btn: {
     marginBottom: 15,
