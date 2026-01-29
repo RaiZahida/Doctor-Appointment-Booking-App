@@ -2,7 +2,7 @@
 
 A comprehensive React Native mobile application for booking doctor appointments, built with Expo and Appwrite backend. The app provides a seamless experience for patients to find doctors, book appointments, and manage their healthcare schedule.
 
-![App Preview](./assets/images/splash-icon.png)
+
 
 ## ✨ Features
 
@@ -173,22 +173,18 @@ const colors = {
 ## 📸 Screenshots
 
 ### Welcome & Authentication
-![Welcome Screen](./assets/images/welcome.png)
-![Login Screen](./assets/images/loginScreen.png)
+![Welcome Screen](./assets/images/app.png)
 
-### Home & Dashboard
-![User Dashboard](./assets/images/dashboard.png)
-![Admin Dashboard](./assets/images/adminDashboard.png)
 
-### Doctor Management
-![Doctors List](./assets/images/doctors.png)
-![Edit Doctor](./assets/images/editDoctor.png)
+### Admin view
 
-### Appointments
-![Admin Appointments](./assets/images/adminAppointment.png)
+![Admin view](./assets/images/admin-view.png)
 
-### Clinics
-![Clinics Management](./assets/images/clinics.png)
+
+
+### User  View Screens 
+![Admin Appointments](./assets/images/user-view.png)
+
 
 ## 🔧 Configuration
 
